@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/fxml/1"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.controller.MainController"
+      prefWidth="1200"
+      prefHeight="800"
+      spacing="15"
+      style="-fx-background-color: #3c3c3c; -fx-padding: 20;">
+
+    <Label fx:id="lblTitle" text="FinTrack" styleClass="title-label" />
+
+    <Label fx:id="txtSaldo" text="Saldo: R$ 0,00" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <!-- Formulário de entrada -->
+    <HBox spacing="10" styleClass="input-row">
+        <TextField fx:id="txtDescricao" promptText="Descrição" prefWidth="300"/>
+        <TextField fx:id="txtValor" promptText="Valor (ex: 123.45)" prefWidth="120"/>
+        <ChoiceBox fx:id="choiceTipo" prefWidth="120"/>
+        <DatePicker fx:id="dateData" />
+        <Button text="Adicionar" onAction="#adicionarTransacao" styleClass="btn-primary" />
+        <Button text="Remover selecionado" onAction="#removerTransacao" styleClass="btn-danger" />
+    </HBox>
+
+    <TableView fx:id="tabelaTransacoes" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colDescricao" text="Descrição" prefWidth="300"/>
+            <TableColumn fx:id="colValor" text="Valor" prefWidth="150"/>
+            <TableColumn fx:id="colTipo" text="Tipo" prefWidth="150"/>
+            <TableColumn fx:id="colData" text="Data" prefWidth="160"/>
+        </columns>
+    </TableView>
+</VBox>

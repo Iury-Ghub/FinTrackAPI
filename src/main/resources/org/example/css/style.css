@@ -1,0 +1,415 @@
+/* ═══════════════════════════════════════════════════════════
+   FinTrack — Dark Glass Theme
+   Paleta: Preto profundo · Vidro fosco · Ciano elétrico
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Tokens de cor ───────────────────────────────────────── */
+/* --bg-deep:       #000000   fundo base quase-preto        */
+/* --surface:       #0a0a0a   superfície de painéis         */
+/* --glass:         #0d0d0d   vidro mais claro              */
+/* --border-soft:   #1a1a1a   borda sutil                   */
+/* --border-glow:   #00c8d7   borda com acento ciano        */
+/* --accent:        #00c8d7   ciano primário                */
+/* --accent-bright: #2ee9f4   ciano brilhante (hover)      */
+/* --accent-dim:    #007a84   ciano escuro (pressed)        */
+/* --text-primary:  #eaf3ff   texto principal               */
+/* --text-muted:    #555555   texto secundário              */
+/* --danger:        #ff4d55   vermelho-danger               */
+
+/* ── Root & Fundo ────────────────────────────────────────── */
+.root {
+    -fx-font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
+    -fx-background-color: #000000;
+    -fx-text-fill: #eaf3ff;
+}
+
+/* ── Título ──────────────────────────────────────────────── */
+.title-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #eaf3ff;
+    -fx-letter-spacing: -0.5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 200, 215, 0.35), 18, 0.0, 0, 0);
+}
+
+/* ── Saldo / Destaque ─────────────────────────────────────── */
+#txtSaldo {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2ee9f4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 200, 215, 0.55), 14, 0.0, 0, 0);
+}
+
+/* ── Labels genéricos ────────────────────────────────────── */
+.label {
+    -fx-text-fill: #eaf3ff;
+    -fx-font-size: 13px;
+}
+
+/* ── Linha de inputs ─────────────────────────────────────── */
+.input-row {
+    -fx-alignment: center-left;
+    -fx-spacing: 10;
+}
+
+/* ── TextField ───────────────────────────────────────────── */
+.text-field {
+    -fx-font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
+    -fx-font-size: 13px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 9 14;
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #eaf3ff;
+    -fx-prompt-text-fill: #333333;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.8), 6, 0, 0, 2);
+}
+
+.text-field:focused {
+    -fx-border-color: #00c8d7;
+    -fx-border-width: 1.5;
+    -fx-background-color: #0d0d0d;
+    -fx-effect:
+            dropshadow(gaussian, rgba(0, 200, 215, 0.22), 14, 0, 0, 0),
+            innershadow(gaussian, rgba(0,0,0,0.8), 6, 0, 0, 2);
+}
+
+/* ── ChoiceBox ───────────────────────────────────────────── */
+.choice-box {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 2 6;
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #eaf3ff;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.8), 6, 0, 0, 2);
+}
+
+.choice-box:focused {
+    -fx-border-color: #00c8d7;
+    -fx-effect:
+            dropshadow(gaussian, rgba(0, 200, 215, 0.20), 14, 0, 0, 0),
+            innershadow(gaussian, rgba(0,0,0,0.8), 6, 0, 0, 2);
+}
+
+.choice-box .label {
+    -fx-text-fill: #eaf3ff;
+    -fx-font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
+    -fx-font-size: 13px;
+    -fx-padding: 0 2;
+}
+
+.choice-box .arrow {
+    -fx-background-color: #555555;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 20, 0, 0, 8);
+}
+
+.choice-box .menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #eaf3ff;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: rgba(0, 200, 215, 0.12);
+}
+
+/* ── DatePicker ──────────────────────────────────────────── */
+.date-picker {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 2 6;
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1.5;
+    -fx-font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
+    -fx-font-size: 13px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.8), 6, 0, 0, 2);
+}
+
+.date-picker:focused {
+    -fx-border-color: #00c8d7;
+    -fx-effect:
+            dropshadow(gaussian, rgba(0, 200, 215, 0.20), 14, 0, 0, 0),
+            innershadow(gaussian, rgba(0,0,0,0.8), 6, 0, 0, 2);
+}
+
+.date-picker .text-field {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #eaf3ff;
+    -fx-prompt-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-effect: none;
+}
+
+.date-picker .text-field:focused {
+    -fx-border-color: transparent;
+    -fx-effect: none;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #0a0a0a;
+}
+
+.date-picker-popup .calendar-grid {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1;
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #eaf3ff;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: rgba(0, 200, 215, 0.12);
+    -fx-background-radius: 6;
+}
+
+.date-picker-popup .selected .day-cell {
+    -fx-background-color: #00c8d7;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 6;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 4;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #555555;
+}
+
+/* ── Botões ──────────────────────────────────────────────── */
+.button {
+    -fx-font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-background-color: linear-gradient(to bottom, #00d4e0, #009faa);
+    -fx-text-fill: #000000;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 9 18;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 200, 215, 0.30), 12, 0, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #2ee9f4, #00c0cc);
+    -fx-effect: dropshadow(gaussian, rgba(0, 200, 215, 0.55), 18, 0, 0, 4);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #009faa, #007882);
+    -fx-effect: dropshadow(gaussian, rgba(0, 200, 215, 0.15), 6, 0, 0, 1);
+}
+
+.button:disabled {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: #333333;
+    -fx-effect: none;
+    -fx-opacity: 1;
+}
+
+/* Botão danger */
+.btn-danger.button {
+    -fx-background-color: linear-gradient(to bottom, #ff545a, #d93840);
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(255, 77, 85, 0.30), 12, 0, 0, 3);
+}
+
+.btn-danger.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff6e73, #ef4a50);
+    -fx-effect: dropshadow(gaussian, rgba(255, 77, 85, 0.55), 18, 0, 0, 4);
+}
+
+.btn-danger.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #c53038, #a82530);
+    -fx-effect: dropshadow(gaussian, rgba(255, 77, 85, 0.15), 6, 0, 0, 1);
+}
+
+/* ── TableView ───────────────────────────────────────────── */
+.table-view {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 20, 0, 0, 6);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #050505;
+    -fx-border-color: transparent transparent #1a1a1a transparent;
+    -fx-border-width: 0 0 1.5 0;
+    -fx-background-radius: 12 12 0 0;
+}
+
+.table-view .column-header,
+.table-view .column-header .label {
+    -fx-text-fill: #00c8d7;
+    -fx-font-weight: 700;
+    -fx-font-size: 12px;
+    -fx-letter-spacing: 0.8px;
+    -fx-background-color: transparent;
+}
+
+/* Separadores de coluna invisíveis */
+.table-view .column-header .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+/* Linhas */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(255,255,255,0.025);
+}
+
+.table-row-cell:even {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:filled:hover {
+    -fx-background-color: rgba(0, 200, 215, 0.07);
+}
+
+.table-row-cell:filled:selected,
+.table-row-cell:selected {
+    -fx-background-color: rgba(0, 200, 215, 0.14);
+}
+
+/* Células */
+.table-cell {
+    -fx-font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
+    -fx-font-size: 13px;
+    -fx-padding: 10 14;
+    -fx-text-fill: #eaf3ff;
+    -fx-border-color: transparent;
+    -fx-alignment: center-left;
+}
+
+.table-cell:selected {
+    -fx-text-fill: #eaf3ff;
+}
+
+/* ── Scrollbars ──────────────────────────────────────────── */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 6px;
+    -fx-pref-height: 6px;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(0, 200, 215, 0.18);
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: rgba(0, 200, 215, 0.38);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+/* ── Separador / Dividers ────────────────────────────────── */
+.separator .line {
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────── */
+.tooltip {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1;
+    -fx-text-fill: #eaf3ff;
+    -fx-font-size: 12px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 14, 0, 0, 4);
+}
+
+/* ── ContextMenu / Popup ─────────────────────────────────── */
+.context-menu {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 20, 0, 0, 8);
+}
+
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #eaf3ff;
+    -fx-font-size: 13px;
+}
+
+.menu-item:focused {
+    -fx-background-color: rgba(0, 200, 215, 0.12);
+    -fx-background-radius: 6;
+}
+
+/* ── Auxiliares utilitários ──────────────────────────────── */
+.text-muted {
+    -fx-text-fill: #555555;
+}
+
+.text-accent {
+    -fx-text-fill: #00c8d7;
+}
+
+.text-danger {
+    -fx-text-fill: #ff4d55;
+}
+
+.text-success {
+    -fx-text-fill: #2ecc71;
+}
+
+.surface-card {
+    -fx-background-color: #0a0a0a;
+    -fx-border-color: #1a1a1a;
+    -fx-border-width: 1.5;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 18, 0, 0, 5);
+}
